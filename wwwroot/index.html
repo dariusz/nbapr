@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>NBA Power Rankings</title>
+	<h1>NBA Power Rankings</h1>
+</head>
+<body>
+	<div id="p1"></div>
+</body>
+
+<script id="tpl_team" type="text/template7">
+	<div data-avg="{{avg}}">
+		<div class="team">{{team}}</div>
+		<div class="logo"><img src="img/{{team}}.gif" /></div>
+		<div class="measures">{{avg}} (+- {{stdev}})</div>
+	</div>
+</script>
+
+<script src="lib/Template7/dist/template7.min.js"></script>
+<script src="lib/Dom7/dist/dom7.min.js"></script>
+<script src="js/transformer.js"></script>
+<script src="js/nbapr.js"></script>
+<script src="js/index.js"></script>
+<script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/1/public/values?alt=json-in-script&callback=nbapr.loadWeeklySummary"></script>
+<!-- <script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/2/public/values?alt=json-in-script&callback=nbapr.loadRankings"></script> -->
+</svg>
+</html>

@@ -2,17 +2,55 @@
 <html>
 <head>
 	<title>NBA Power Rankings</title>
-	<h1>NBA Power Rankings</h1>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-	<div id="p1"></div>
+	<div class="container">
+		<div class="header">
+			<h1>NBA Power Rankings</h1>
+		</div>
+		<div class="content">
+			<div class="week">
+				<div class="dates">
+					Pre-Season (July 2017)
+				</div>
+				<div class="rankings">
+					<div class="team">
+						<div class="rank">1</div>
+						<div class="logo">
+							<img title="Atlanta Hawks" src="img/atl.png"></img>
+						</div>
+						<div class="name">atl</div>
+						<div class="avg">5.8</div>
+						<div class="dev">&#8723; 2.1</div>
+					</div>
+					<div class="team">
+						<div class="rank">2</div>
+						<div class="logo">
+							<img title="Boston Celtics" src="img/bos.png"></img>
+						</div>
+						<div class="name">bos</div>
+						<div class="avg">12.8</div>
+						<div class="dev">&#8723; 11.1</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="copyright">&copy; Dariusz Grabka</div>
+			<div class="twitter"><a href="https://twitter.com/dariusz">@dariusz</a></div>
+		</div>
+	</div>
 </body>
 
 <script id="tpl_team" type="text/template7">
 	<div data-avg="{{avg}}">
 		<div class="team">{{team}}</div>
 		<div class="logo"><img src="img/{{team}}.gif" /></div>
-		<div class="measures">{{avg}} (+- {{stdev}})</div>
+		<div class="measures">{{avg}} (+- {{sthev}})</div>
 	</div>
 </script>
 

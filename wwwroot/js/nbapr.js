@@ -1,11 +1,12 @@
 var nbapr = {
 
-	"weeks" : null,
+	"loadRankings" : function (data) {
+		nbapr.loadWeeklyRankings(data, "p1");
+	},
 
-	"loadWeeklySummary" : function (data) {
-		nbapr.weeks = transformer.weekly(data, "AVG");
-
-		var html = tmp_team(nbapr.weeks.p1.atl);
-		$$("#p1").html(html);
+	"loadWeeklyRankings" : function (data, weekname) {
+		var rankings = transformer.weekly(data, weekname);
+		var html = tmp_rankings(rankings);
+		$$("#" + weekname + " .rankings").html(html);
 	}
 }

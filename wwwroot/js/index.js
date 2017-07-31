@@ -1,3 +1,3 @@
 var $$ = Dom7;
-var tmp_team_html = $$("#tpl_team").html();
-var tmp_team = Template7.compile(tmp_team_html);
+var tmp_rankings_html = $$("#tpl_rankings").html();
+var tmp_rankings = Template7.compile(tmp_rankings_html);

@@ -13,30 +13,9 @@
 			<h1>NBA Power Rankings</h1>
 		</div>
 		<div class="content">
-			<div class="week">
-				<div class="dates">
-					Pre-Season (July 2017)
-				</div>
-				<div class="rankings">
-					<div class="team">
-						<div class="rank">1</div>
-						<div class="logo">
-							<img title="Atlanta Hawks" src="img/atl.png"></img>
-						</div>
-						<div class="name">atl</div>
-						<div class="avg">5.8</div>
-						<div class="dev">&#8723; 2.1</div>
-					</div>
-					<div class="team">
-						<div class="rank">2</div>
-						<div class="logo">
-							<img title="Boston Celtics" src="img/bos.png"></img>
-						</div>
-						<div class="name">bos</div>
-						<div class="avg">12.8</div>
-						<div class="dev">&#8723; 11.1</div>
-					</div>
-				</div>
+			<div class="week" id="p1">
+				<div class="dates">Pre-Season (July 2017)</div>
+				<div class="rankings"><!-- teams go here --></div>
 			</div>
 		</div>
 		<div class="footer">
@@ -46,12 +25,18 @@
 	</div>
 </body>
 
-<script id="tpl_team" type="text/template7">
-	<div data-avg="{{avg}}">
-		<div class="team">{{team}}</div>
-		<div class="logo"><img src="img/{{team}}.gif" /></div>
-		<div class="measures">{{avg}} (+- {{sthev}})</div>
-	</div>
+<script id="tpl_rankings" type="text/template7">
+	{{#each teams}}
+		<div class="team">
+			<div class="rank">{{rank}}</div>
+			<div class="logo">
+				<img title="{{team}}" src="img/{{team}}.png"></img>
+			</div>
+			<div class="name">{{team}}</div>
+			<div class="avg">{{avg}}</div>
+			<div class="dev">&#8723; {{stdev}}</div>
+		</div>
+	{{/each}}
 </script>
 
 <script src="lib/Template7/dist/template7.min.js"></script>
@@ -59,7 +44,7 @@
 <script src="js/transformer.js"></script>
 <script src="js/nbapr.js"></script>
 <script src="js/index.js"></script>
-<script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/1/public/values?alt=json-in-script&callback=nbapr.loadWeeklySummary"></script>
+<script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/1/public/values?alt=json-in-script&callback=nbapr.loadRankings"></script>
 <!-- <script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/2/public/values?alt=json-in-script&callback=nbapr.loadRankings"></script> -->
 </svg>
 </html>

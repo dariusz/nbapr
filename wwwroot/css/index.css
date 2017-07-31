@@ -21,7 +21,7 @@ body {
 
 .week .dates {
 	color: #666;
-	margin: 1em;
+	margin: 0.5em;
 	text-transform: uppercase;
 	border-bottom: 1px solid #666;
 	padding-bottom: 1em;

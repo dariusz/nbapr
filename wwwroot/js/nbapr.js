@@ -6,7 +6,7 @@ var nbapr = {
 
 	"loadWeeklyRankings" : function (data, weekname) {
 		var rankings = transformer.weekly(data, weekname);
-		var html = tmp_rankings(rankings);
+		var html = tpl_rankings(rankings);
 		$$("#" + weekname + " .rankings").html(html);
 	}
 }

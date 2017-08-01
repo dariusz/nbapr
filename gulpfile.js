@@ -14,6 +14,11 @@ gulp.task('images', function () {
 		.pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('vendor', function () {
+	return gulp.src('src/vendor/**')
+		.pipe(gulp.dest('dist/vendor'))
+});
+
 gulp.task('useref', function () {
 	return gulp.src('src/*.html')
 		.pipe(useref())
@@ -27,5 +32,5 @@ gulp.task('clean', function () {
 })
 
 gulp.task('build', function(callback) {
-	runSequence('clean', ['images', 'useref'], callback);
+	runSequence('clean', ['images', 'useref', 'vendor'], callback);
 });

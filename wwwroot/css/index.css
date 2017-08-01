@@ -6,6 +6,7 @@ body {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0.3em;
 }
 
 .header {
@@ -31,10 +32,16 @@ body {
 	margin-bottom: 0.3em;
 }
 
+.explain {
+	margin-top: 1em;
+	font-size: 0.8em;
+	text-align: center;
+	font-style: italic;
+	color: #666;
+}
+
 .footer div {
-	clear: both;
-	float: left;
-	margin: 1em;
+	margin-top: 1em;
 }
 
 .rankings {

@@ -11,17 +11,23 @@ body {
 
 .header {
 	text-align: center;
-	color: #666;
+	color: #999;
 	margin-bottom: 1em;
 	width: 66%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.header span {
+	font-style: italic;
+}
+
 .blockheading {
-	color: #999;
-	border-bottom: 1px solid #999;
+	color: #666;
 	text-transform: uppercase;
+	text-align: center;
+	font-weight: 500;
+	border-bottom: 1px solid #666;
 	padding-bottom: 0.7em;
 	padding-top: 0.7em;
 	margin-bottom: 1em;
@@ -43,7 +49,7 @@ body {
 	margin-top: 1em;
 }
 
-.rankings {
+.rankings, .rankingheader {
 	display: table;
 	width: 100%;
 }
@@ -53,7 +59,7 @@ body {
 	display: table-row;
 }
 
-.team div {
+.team div, .rankingheader div {
 	width: 22%;
 	text-align: center;
 	display: table-cell;
@@ -74,18 +80,11 @@ body {
 	font-weight: 800;
 }
 
-.rankingheader {
-	width: 100%;
-}
-
 .rankingheader div {
-	color: #aaa !important;
+	color: #999 !important;
 	font-weight: normal;
-	width: 22%;
-	float: left;
-	text-align: center;
 	font-size: 1em;
-	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 .rankingheader .rank {
@@ -93,15 +92,16 @@ body {
 }
 
 .sources {
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 .sourcelist {
 	list-style-type: none;
+	padding-left: 0;
 }
 
 .source {
-	margin-bottom: 0.8em;
+	margin-bottom: 1em;
 }
 
 .source a, .source a:visited {

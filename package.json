@@ -11,20 +11,21 @@
     "url": "git+https://github.com/dariusz/nbapr.git"
   },
   "author": "Dariusz Grabka",
-  "license": "ISC",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/dariusz/nbapr/issues"
   },
   "homepage": "https://github.com/dariusz/nbapr#readme",
-	"engines": {
-		"node":">=5.10.0"
-	},
+  "engines": {
+    "node": ">=5.10.0"
+  },
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-if": "^2.0.2",
     "gulp-uglify": "^3.0.0",
-    "gulp-useref": "^3.1.2"
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^2.1.0"
   }
 }

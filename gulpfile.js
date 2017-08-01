@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var del = require('del');
+var runSequence = require('run-sequence');
 
 gulp.task('default', function () {
 });
@@ -24,3 +25,7 @@ gulp.task('useref', function () {
 gulp.task('clean', function () {
 	return del.sync('dist');
 })
+
+gulp.task('build', function(callback) {
+	runSequence('clean', ['images', 'useref'], callback);
+});

@@ -1,0 +1,26 @@
+{
+  "name": "nbapr",
+  "version": "0.0.1",
+  "description": "#NBAAPR (nbaapr.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariusz/nbapr.git"
+  },
+  "author": "Dariusz Grabka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dariusz/nbapr/issues"
+  },
+  "homepage": "https://github.com/dariusz/nbapr#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2"
+  }
+}

@@ -74,3 +74,21 @@ body {
 	text-transform: uppercase;
 	font-weight: 800;
 }
+
+.rankingheader {
+	width: 100%;
+}
+
+.rankingheader div {
+	color: #aaa !important;
+	font-weight: normal;
+	width: 22%;
+	float: left;
+	text-align: center;
+	font-size: 1em;
+	margin-bottom: 0.5em;
+}
+
+.rankingheader .rank {
+	width: 12%;
+}

@@ -16,6 +16,9 @@
     "url": "https://github.com/dariusz/nbapr/issues"
   },
   "homepage": "https://github.com/dariusz/nbapr#readme",
+	"engines": {
+		"node":">=5.10.0"
+	},
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",

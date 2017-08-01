@@ -4,7 +4,37 @@ var transformer = {
 		return a - b;
 	},
 
-	"weekly" : function (input, weekname) {
+	"getweekfromrow" : function (row) {
+		var week = row["gsx$week"]['$t'];
+		return week.toLowerCase();
+	},
+
+	"weeklysources" : function (input, weekname) {
+		var data = { "sources" : {} }
+		var rows = input.feed.entry;
+
+		for (rowkey in rows) {
+			var row = rows[rowkey];
+			var week = transformer.getweekfromrow(row);
+
+			if (week == weekname) {
+				var site = row['gsx$site']['$t'];
+				var name = row['gsx$name']['$t'];
+				var url = row['gsx$url']['$t'];
+				var date = row['gsx$date']['$t'];
+				data['sources'][site] = {
+					"site" : site,
+					"name" : name,
+					"url" : url,
+					"date" : date
+				};
+			}
+		}
+
+		return data;
+	},
+
+	"weeklyrankings" : function (input, weekname) {
 
 		var data = { }
 		var rows = input.feed.entry; // rows in the weekly summary sheet
@@ -15,9 +45,8 @@ var transformer = {
 
 			var row = rows[rowkey];
 			var measure = row["gsx$measure"]['$t']; delete row["gsx$measure"];
-			var week = row["gsx$week"]['$t']; delete row["gsx$week"];
+			var week = transformer.getweekfromrow(row); delete row["gsx$week"];
 			measure = measure.toLowerCase();
-			week = week.toLowerCase();
 
 			// only get the requested week
 

@@ -33,11 +33,10 @@ body {
 }
 
 .explain {
-	margin-top: 1em;
 	font-size: 0.8em;
-	text-align: center;
 	font-style: italic;
 	color: #666;
+	clear: both;
 }
 
 .footer div {
@@ -91,4 +90,21 @@ body {
 
 .rankingheader .rank {
 	width: 12%;
+}
+
+.sources {
+	margin-top: 1em;
+}
+
+.sourcelist {
+	list-style-type: none;
+}
+
+.source {
+	margin-bottom: 0.8em;
+}
+
+.source a, .source a:visited {
+	color: blue;
+	text-decoration: none;
 }

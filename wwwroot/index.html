@@ -24,13 +24,13 @@
 					<div class="dev">Std. Dev.</div>
 				</div>
 				<div class="rankings"><!-- teams go here --></div>
-				<div class="explain">Ranking is based on average weekly (or monthly) "power rankings", with standard deviation acting as a tie-break.</div>
+				<div class="sources"></div>
 			</div>
-			<div class="all_weeks"><!-- carousel to navigate to other weeks --></div>
 		</div>
 		<div class="footer">
 			<div class="contact">
-				<div class="blockheading">Contact</div>
+				<div class="blockheading">What is this?</div>
+				<div>During the NBA season, teams are ranked weekly into "power rankings" by professional basketball writers. We aggregate those rankings, average them, and use standard deviation as a tie-break.</div>
 				<div>Updated weekly by Dariusz in Toronto, Ontario. Get in touch!</div>
 				<div><a href="https://twitter.com/intent/tweet?screen_name=dariusz&hashtags=NBAAPR" class="twitter-mention-button" data-show-count="false">Tweet to @dariusz</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 			</div>
@@ -52,12 +52,22 @@
 	{{/each}}
 </script>
 
+<script id="tpl_sources" type="text/template7">
+	<ul class="sourcelist">
+	{{#each sources}}
+		<li class="source">
+			<a href="{{url}}" target="_new" title="{{name}} - {{date}}">[{{site}}] {{name}}</a>
+		</li>
+	{{/each}}
+	</ul>
+</script>
+
 <script src="lib/template7.min.js"></script>
 <script src="lib/dom7.min.js"></script>
 <script src="js/transformer.js"></script>
 <script src="js/nbapr.js"></script>
 <script src="js/index.js"></script>
 <script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/1/public/values?alt=json-in-script&callback=nbapr.loadRankings"></script>
-<!-- <script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/2/public/values?alt=json-in-script&callback=nbapr.loadRankings"></script> -->
+<script src="https://spreadsheets.google.com/feeds/list/1nK_9dsvKj4F22hqJPFJOBE-ftTVMac3vFIkp9ULjSbo/2/public/values?alt=json-in-script&callback=nbapr.loadSources"></script>
 </svg>
 </html>

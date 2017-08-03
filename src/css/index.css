@@ -18,7 +18,9 @@ body {
 	margin-right: auto;
 }
 
-.header span {
+.header h2 {
+	font-size: 1.2em;
+	font-weight: normal;
 	font-style: italic;
 }
 

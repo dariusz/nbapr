@@ -48,7 +48,7 @@
 			</div>
 			<div class="name">{{team}}</div>
 			<div class="avg">{{avg}}</div>
-			<div class="dev">&#8723; {{stdev}}</div>
+			<div class="dev"><span class="{{#if max_stdev}}max{{/if}} {{#if min_stdev}}min{{/if}}">&#8723; {{stdev}}</span></div>
 		</div>
 	{{/each}}
 </script>

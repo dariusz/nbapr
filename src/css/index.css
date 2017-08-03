@@ -108,3 +108,9 @@ body {
 	color: blue;
 	text-decoration: none;
 }
+
+span.max, span.min {
+	background-color: #fea;
+	border-radius: 0.25em;
+	padding: 0.25em;
+}

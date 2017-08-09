@@ -8,6 +8,7 @@ var runSequence = require('run-sequence');
 var download = require("gulp-download-stream");
 
 gulp.task('default', function () {
+	// nothing
 });
 
 gulp.task('images', function () {
@@ -33,7 +34,7 @@ gulp.task('clean', function () {
 })
 
 gulp.task('build', function(callback) {
-	runSequence('clean', 'dl_ranks', 'dl_sources', ['images', 'useref', 'vendor'], callback);
+	runSequence('clean', ['dl_ranks', 'dl_sources'], ['images', 'useref', 'vendor'], callback);
 });
 
 gulp.task('dl_ranks', function() {

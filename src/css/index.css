@@ -31,7 +31,7 @@ body {
 	font-weight: 500;
 	border-bottom: 1px solid #666;
 	padding-bottom: 0.7em;
-	padding-top: 0.7em;
+	padding-top: 1.5em;
 	margin-bottom: 1em;
 }
 
@@ -115,4 +115,29 @@ span.max, span.min {
 	background-color: #fea;
 	border-radius: 0.25em;
 	padding: 0.25em;
+}
+
+.post {
+}
+
+.post .tag {
+	background-color: #fea;
+	padding: 0.6em;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	margin-right: 0.3em;
+
+}
+
+.post .subheading, .post .footer {
+	color: #666;
+	font-style: italic;
+}
+
+.post h3, .post h4 {
+	font-style: italic;
+}
+
+.post h3 {
+	font-size: 2em;
 }

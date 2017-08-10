@@ -142,3 +142,16 @@ span.max, span.min {
 .post h3 {
 	font-size: 2em;
 }
+
+.share {
+	text-align: center;
+}
+
+.share a img {
+	width: 35px;
+	padding: 5px;
+	border: 0;
+	box-shadow: 0;
+	display: inline;
+	margin: 0.5em;
+}
